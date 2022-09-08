@@ -47,12 +47,12 @@ class StateListChange<T> extends StatelessWidget {
 }
 
 class StateChange<T> extends StatelessWidget {
-  StateChange({
-    Key? key,
+  const StateChange({
+    super.key,
     this.debugW,
     required this.notifier,
     required this.builder,
-  }) : super(key: key ?? UniqueKey());
+  });
 
   final DebugW? debugW;
   final ValueNotifier<T> notifier;
