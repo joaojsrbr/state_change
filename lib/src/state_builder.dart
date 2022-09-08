@@ -6,14 +6,12 @@ import 'package:flutter/material.dart';
 import 'inherited_widget.dart';
 
 class StateListChange<T> extends StatelessWidget {
-  StateListChange({
-    Key? key,
+  const StateListChange({
+    super.key,
     this.debugW,
     required this.notifier,
     required this.builder,
-  }) : super(
-          key: key ?? UniqueKey(),
-        );
+  });
 
   final DebugW? debugW;
   final List<ValueNotifier<T>> notifier;
